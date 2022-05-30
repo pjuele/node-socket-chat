@@ -1,0 +1,32 @@
+{
+  "name": "mp-backend",
+  "version": "1.0.0",
+  "description": "Node.js / MySQL backend para la App Flutter de Martin (prototipo)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjuele/mp-backend.git"
+  },
+  "keywords": [
+    "Node",
+    "MySQL",
+    "API"
+  ],
+  "author": "Pablo Juele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjuele/mp-backend/issues"
+  },
+  "homepage": "https://github.com/pjuele/mp-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1"
+  }
+}
