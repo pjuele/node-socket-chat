@@ -22,3 +22,5 @@ run the *client* using i.e. *Live Server* from *Visual Studio Code* (it's just a
 Be aware that as of this simple version, they both must run in localhost, and the *client* must run in port **5500** (that's the port used by Live Server, at least for me).
 
 > **If you serve the static files in a different port**, make sure to update that in the CORS options object in */server/server.js*
+
+![Screenshot](https://res.cloudinary.com/wdpj/image/upload/v1653933242/node-socket-chat/Screen_Shot_2022-05-29_at_19.58.08.png)
