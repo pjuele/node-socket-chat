@@ -1,0 +1,4 @@
+PORT=3000
+# space separated authorised client url:port list:
+ALLOWED_CLIENTS="http://<client host #1>:<client port #1> http://<client host #2>:<client port #2> <etc>"
+ALLOWED_METHODS="GET POST"

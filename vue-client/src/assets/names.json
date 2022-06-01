@@ -1,4 +1,4 @@
-const names = [
+[
     "Aaren",
     "Aarika",
     "Abagael",
@@ -4945,54 +4945,4 @@ const names = [
     "Zsazsa",
     "Zulema",
     "Zuzana"
-];
-
-var messages = document.getElementById('messages');
-var form = document.getElementById('form');
-var input = document.getElementById('input');
-var nick = document.getElementById('nick');
-
-const me = {
-    name: names[Math.round(Math.random() * names.length, 0)],
-    socketId: null,
-    avatar: 'av' + Math.round(Math.random() * 15 + 1)
-};
-nick.value = me.name;
-
-// We set a random background color to tell users apart when testing:
-const r = Math.round(Math.random() * 255, 0);
-const g = Math.round(Math.random() * 255, 0);
-const b = Math.round(Math.random() * 255, 0);
-document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-
-// Connect to the socket server (using server url):
-const socket = io('http://127.0.0.1:3000');
-
-// Socket event handlers:
-
-// Event: Connection successful:
-socket.on('connect', () => {
-    // console.log('CONNECTED!');
-    me.socketId = socket.id;
-    // console.log(me.name, me.avatar, me.socketId);
-    socket.emit('signIn', me);
-})
-
-// Event: Message received from server (no matter if this or another client sent it):
-socket.on('chatMessage', function (data) {
-    var item = document.createElement('li');
-    item.textContent = `[${data.user.name}] : ` + data.msg;
-    messages.appendChild(item);
-    window.scrollTo(0, document.body.scrollHeight);
-});
-
-// Plain JS event handler for the input box (form submit):
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (input.value) {
-        // Send the message to the socket connection:
-        // (and to other users, via the server)
-        socket.emit('chatMessage', input.value);
-        input.value = '';
-    }
-});
+]
